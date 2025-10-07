@@ -12,7 +12,7 @@ resource "aws_instance" "web_app" {
 }
 
 module "ec2_instance" {
-  source  = "git@github.com:infracost/terraform-private-module-example22.git"
+  source  = "git@github.com:davide-baldo/terraform-private-module-example.git"
   version = "~> 3.0"
 
   name = "single-instance"
