@@ -11,6 +11,11 @@ resource "aws_instance" "web_app" {
   instance_type = "t3.large"
 }
 
+resource "aws_instance" "web_app2" {
+  ami           = "ami-674cbc1e"
+  instance_type = "t3.large"
+}
+
 module "ec2_instance" {
   source  = "git@github.com:davide-baldo/terraform-private-module-example.git"
   version = "~> 3.0"
