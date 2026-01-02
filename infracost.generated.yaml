@@ -1,0 +1,47 @@
+currency: USD
+version: "0.2"
+dashboard_api_endpoint: https://dashboard.api.infracost.io
+dashboard_endpoint: https://dashboard.infracost.io
+pricing_api_endpoint: https://pricing.api.infracost.io
+projects:
+    - config_sha: 0c0c4fbc5ddd93d62ca967c4c318cf49db87da48
+      path: infra/dev/us1/ec2
+      name: infra-dev-us1-ec2
+      project_type: terraform
+    - config_sha: ccac8d09ec900046c2795f2bb702d19247ec3ecf
+      path: infra/dev/us1/rds
+      name: infra-dev-us1-rds
+      project_type: terraform
+    - config_sha: d918dcd32eec3e0d6588623c5c03a116cba43cf6
+      path: infra/dev/us2/ec2
+      name: infra-dev-us2-ec2
+      project_type: terraform
+    - config_sha: b76fda87296456f7b2bc3e421f3514da57846674
+      path: infra/dev/us2/rds
+      name: infra-dev-us2-rds
+      project_type: terraform
+    - config_sha: 89f6b5e5ea20c27880e4b3bbdbc9b23c5f8ec4ec
+      path: infra/prod/eu1/ec2
+      name: infra-prod-eu1-ec2
+      project_type: terraform
+    - config_sha: ad90ad9d4e77da453bb750a814d341792c8d7fad
+      path: infra/prod/eu1/rds
+      name: infra-prod-eu1-rds
+      project_type: terraform
+    - config_sha: 7c13eac94db86d2f576648a8fcdf5630f295c10d
+      path: infra/prod/us1/ec2
+      name: infra-prod-us1-ec2
+      project_type: terraform
+    - config_sha: 95e34b5f22db635abd8c102b0ab709f7eba7b1bf
+      path: infra/prod/us1/rds
+      name: infra-prod-us1-rds
+      project_type: terraform
+    - config_sha: 17d9f4136434efb82fbb533f0f29681f3fe6f1d0
+      path: infra/prod/us2/ec2
+      name: infra-prod-us2-ec2
+      project_type: terraform
+    - config_sha: 99a585374c3e3b06b2372593e1db9c26366e6503
+      path: infra/prod/us2/rds
+      name: infra-prod-us2-rds
+      project_type: terraform
+enable_usage_api: true
