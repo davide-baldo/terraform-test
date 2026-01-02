@@ -7,6 +7,8 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "mysql" {
-  engine         = "mysql"
-  instance_class = "db.t3.xlarge"
+  engine                = "mysql"
+  instance_class        = "db.t3.xlarge"
+  storage_encrypted     = true
+  copy_tags_to_snapshot = true
 }
