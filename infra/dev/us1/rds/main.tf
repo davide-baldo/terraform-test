@@ -7,6 +7,7 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "mysql" {
-  engine         = "mysql"
-  instance_class = "db.t3.medium"
+  engine                          = "mysql"
+  instance_class                  = "db.t3.medium"
+  enabled_cloudwatch_logs_exports = ["audit", "error", "general", "slowquery"]
 }
