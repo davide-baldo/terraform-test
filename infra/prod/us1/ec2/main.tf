@@ -7,6 +7,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web_app" {
-  ami           = "ami-674cbc1e"
-  instance_type = "t3.xlarge"
+  ami                         = data.aws_ami.amazon_linux_2.id
+  instance_type               = "t3.xlarge"
+  associate_public_ip_address = false
 }
