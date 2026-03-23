@@ -6,7 +6,27 @@ provider "aws" {
   secret_key                  = "mock_secret_key"
 }
 
+data "aws_ami" "amazon_linux_2_arm64" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-arm64-gp2"]
+  }
+
+  filter {
+    name   = "architecture"
+    values = ["arm64"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
 resource "aws_instance" "web_app" {
-  ami           = "ami-674cbc1e"
-  instance_type = "t3.xlarge"
+  ami           = data.aws_ami.amazon_linux_2_arm64.id
+  instance_type = "t4g.xlarge"
 }
