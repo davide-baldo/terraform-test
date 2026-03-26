@@ -7,6 +7,10 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "mysql" {
-  engine         = "mysql"
-  instance_class = "db.t3.2xlarge"
+  engine                          = "mysql"
+  instance_class                  = "db.t3.2xlarge"
+  allocated_storage               = 20
+  storage_encrypted               = true
+  copy_tags_to_snapshot           = true
+  enabled_cloudwatch_logs_exports = ["audit", "error", "general", "slowquery"]
 }
